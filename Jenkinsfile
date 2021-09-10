@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     PIPELINE_USER_CREDENTIAL_ID = 'aws-sam-pipeline-demo'
-    SAM_TEMPLATE = 'template.yaml'
+    SAM_TEMPLATE = 'sam-app/template.yaml'
     MAIN_BRANCH = 'main'
     TESTING_STACK_NAME = 'sam-app'
     TESTING_PIPELINE_EXECUTION_ROLE = 'arn:aws:iam::187631333273:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-KB593KWNGAL3'
