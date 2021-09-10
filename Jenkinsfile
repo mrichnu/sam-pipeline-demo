@@ -42,7 +42,7 @@ pipeline {
       agent {
         docker {
           image 'public.ecr.aws/sam/build-provided'
-          args '--user 0:0 -v /var/run/docker.sock:/var/run/docker.sock'
+          args '--user "$(id -u):$(id -g)" -v /var/run/docker.sock:/var/run/docker.sock'
         }
       }
       steps {
@@ -71,7 +71,7 @@ pipeline {
       agent {
         docker {
           image 'public.ecr.aws/sam/build-provided'
-          args '--user 0:0 -v /var/run/docker.sock:/var/run/docker.sock'
+          args '--user "$(id -u):$(id -g)" -v /var/run/docker.sock:/var/run/docker.sock'
         }
       }
       steps {
